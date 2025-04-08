@@ -1,0 +1,463 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    color: #575050;
+    background-color: transparent; /* Use transparent to avoid overriding html background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+    line-height: 1.6; /* Improved line height for readability */
+    font-size: 1rem; /* Base font size */
+    font-family: Arial, sans-serif; /* Consistent font across the site */
+    background-image: url('https://img.freepik.com/free-vector/seamless-gold-circle-grid-pattern-black-background_53876-118452.jpg');
+    background-size: cover; /* Ensures the image covers the viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating the background image */
+    background-attachment: fixed; /* Keeps the background image fixed while content scrolls */
+    background-color: #040f4e; /* Fallback color for older browsers */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Fixed incomplete transition property */
+}
+
+header {
+    background-color: #040f4e;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem; /* Added margin to separate header from content */
+    margin-right: auto; /* Aligns header to the left */
+    margin-left: auto; /* Aligns header to the right */
+    width: 100%; /* Ensures header takes full width */
+    height: 100px; /* Fixed height for the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0; /* Simplified border-radius */
+    overflow: hidden; /* Ensures the header content doesn't overflow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    padding-bottom: 20px; /* Added margin to separate title from navigation */
+}
+
+nav ul {
+    color: yellow;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    display: inline;
+    color: yellow;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffd905; /* Changed color for "View My Projects" link */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd900; /* Changed hover color for "View My Projects" link */
+}
+
+/* Main content */
+main {
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #575050;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: lch(99.68% 0.52 290.36);
+    outline: none;
+    box-shadow: 0 0 5px #2068f780;
+}
+
+form button {
+    background-color: #040f4e;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1638a0;
+}
+
+/* Form response message */
+#formResponse {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: hsl(0, 0%, 93%);
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #040f4e;
+    color: white;
+}
+footer {
+    background-color: #040f4e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    color: #ffffff; /* Ensure text color contrasts with the background */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Updated border color */
+    padding: 0.8rem;
+}
+
+table th {
+    background-color: rgba(25, 50, 194, 0.9); /* Semi-transparent header background */
+    color: #b81a1a; /* Ensure text color contrasts with the header background */
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency for even rows */
+}
+
+table tr:hover {
+    background-color: rgba(255, 204, 0, 0.3); /* Highlight row on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    form {
+        padding: 0.5rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.8rem;
+    }
+
+    form button {
+        font-size: 0.8rem;
+    }
+}
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    header {
+        background-color: #040f4e;
+        color: #e0e0e0;
+    }
+
+    nav ul li a {
+        color: #e0e0e0;
+    }
+
+    form {
+        background-color: #1f1f1f;
+        color: #e0e0e0;
+    }
+
+    form input,
+    form textarea {
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+        border: 1px solid #232453;
+    }
+
+    form button {
+        background-color: #ca1f1f;
+        color: white;
+    }
+
+    table th {
+        background-color: #040f4e;
+        color: white;
+    }
+}
+
+/* Center text class */
+.center-text {
+    text-align: center;
+}
+/* Center image class */
+.center-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+} /* Consider merging with .responsive-image if functionality overlaps */
+/* Responsive image class */
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+/* Flexbox layout for the main content */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+/* Flex item styles */
+.flex-item {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+    max-width: 300px; /* Maximum width for each item */
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Flex item image styles */
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Flex item heading styles */
+.flex-item h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+/* Flex item paragraph styles */
+.flex-item p {
+    font-size: 1rem;
+    color: #666;
+}
+/* Flex item button styles */
+.flex-item button {
+    background-color: #1f38ca;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Flex item button hover styles */
+.flex-item button:hover {
+    background-color: #1638a0;
+}
+/* Flex item button disabled styles */
+.flex-item button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.about-para {
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px;
+    background-color: darkcyan;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Call-to-action button styles */
+.cta-button {
+    color: yellow; /* Moved inline style to CSS */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cta-button:hover {
+    color: #ffd900; /* Hover effect for the button */
+}
+
+/* About heading styles */
+.about-heading {
+    color: darkcyan; /* Moved inline style to CSS */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 20px;
+    margin-top: 2rem; /* Additional spacing for about heading */
+}
+/* Hero section styles */
+.hero-section {
+    background-color: #040f4e;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Hero image styles */
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+.hero-image:hover {
+    transform: scale(1.05);
+}
+/* Hero paragraph styles */
+
+.hero-para {
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px;
+    background-color: darkcyan;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Hero heading styles */
+
+
+.hero-heading {
+    color: darkcyan; /* Moved inline style to CSS */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 20px;
+    margin-top: 2rem; /* Additional spacing for hero heading */
+}
+
+/* Heading spacing styles */
+h1, h2, h3 {
+    margin-top: 1.5rem; /* Add spacing above headings */
+    margin-bottom: 1rem; /* Add spacing below headings */
+    line-height: 1.3; /* Improve readability */
+}
+
+/* Thank-you message styles */
+.thank-you-message {
+    color: rgb(249, 253, 3) !important; /* Ensure the color is applied */
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
